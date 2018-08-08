@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kpackagetool5 -t Plasma/Applet -u package
