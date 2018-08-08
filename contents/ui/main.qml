@@ -17,7 +17,7 @@ import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import QtQuick.Extras 1.4
 import org.kde.plasma.plasmoid 2.0
-import ApplicationLauncher 1.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 ToggleButton {
     property string name: Plasmoid.configuration.name
@@ -30,22 +30,22 @@ ToggleButton {
     text: name
     tooltip: "Toggle " + name
 
-    Application{
-	id: launcher
-	appName: "/bin/true"
+    PlasmaCore.DataSource {
+	id: executable
+	engine: "executable"
+	connectedSources: []
+	onNewData: disconnectSource(sourceName) // cmd finished
+
+	function exec(cmd) {
+	    connectSource(cmd)
+	}
     }
 
     function toggleAction() {
 	if (checked) {
-	    if (onScriptEnabled) {
-		launcher.appName = onScript;
-		launcher.launchScript();
-	    }
+	    if (onScriptEnabled) executable.exec(onScript);
 	} else {
-	    if (offScriptEnabled) {
-		launcher.appName = offScript;
-		launcher.launchScript();
-	    }
+	    if (offScriptEnabled) executable.exec(offScript);
 	}
     }
 
