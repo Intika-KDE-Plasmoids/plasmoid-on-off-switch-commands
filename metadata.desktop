@@ -1,0 +1,24 @@
+[Desktop Entry]
+Name=On/Off Switch
+Name[de]=Ein/Aus Schalter
+Name[en_GB]=On/Off Switch
+Comment=Configurable On/Off Switch
+Comment[de]=Konfigurierbarer Ein/Aus Schalter
+Comment[en_GB]=Configurable On/Off Switch
+
+Icon=system-shutdown
+Type=Service
+X-KDE-ServiceTypes=Plasma/Applet
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+
+X-KDE-PluginInfo-Author=Norbert Eicker
+X-KDE-PluginInfo-Email=norbert.eicker@gmx.de
+X-KDE-PluginInfo-Name=com.github.neicker.on-off-switch
+X-KDE-PluginInfo-Version=0.4.0
+X-KDE-PluginInfo-Category=Windows and Tasks
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-FormFactors=desktop
