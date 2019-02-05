@@ -1,4 +1,4 @@
-# on-off-switch
+# On-Off-Switch-Plasmoid
 ## A Configurable On/Off Switch Plasmoid
 
 This is a widely configurable On/Off switch plasmoid for KDE fully
