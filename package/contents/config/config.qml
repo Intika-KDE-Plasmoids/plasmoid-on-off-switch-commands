@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2019 by intika <intika@librefox.org>
  * Copyright (C) 2017-2018 by Norbert Eicker <norbert.eicker@gmx.de>
  *
  * This program is free software; you can redistribute it and/or
@@ -18,8 +19,18 @@ import org.kde.plasma.configuration 2.0
 
 ConfigModel {
     ConfigCategory {
-	name: i18n("General")
-	icon: "configure"
-	source: "config.qml"
+        name: i18n("General")
+        icon: "configure"
+        source: "configGeneral.qml"
+    }
+    ConfigCategory {
+        name: i18n("Action")
+        icon: "configure"
+        source: "configAction.qml"
+    }
+    ConfigCategory {
+        name: i18n("Watcher")
+        icon: "configure"
+        source: "configWatcher.qml"
     }
 }
