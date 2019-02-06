@@ -31,15 +31,15 @@ The plasmoid can by widely configured via the Settings menu
 
 <p align="center">
   
+<img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072706.png" />
+
+</br>
+
 <img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072407.png" />
 
 <img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072415.png" />
 
 <img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072428.png" />
-
-</br>
-
-<img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072706.png" />
 
 </br>
 
