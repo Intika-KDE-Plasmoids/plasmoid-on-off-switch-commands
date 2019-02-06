@@ -37,6 +37,8 @@ The plasmoid can by widely configured via the Settings menu
 
 <img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072428.png" />
 
+</br>
+
 <img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072706.png" />
 
 </br>
