@@ -28,3 +28,6 @@ top-directory
 The plasmoid can by widely configured via the Settings menu
 
 ## Captures
+
+## Todo 
+Apply text change immediately after settings saved
