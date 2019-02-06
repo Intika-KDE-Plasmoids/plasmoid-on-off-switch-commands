@@ -1,9 +1,23 @@
 # On-Off-Switch-Plasmoid
 ## A Configurable On/Off Switch Plasmoid
 
-This is a widely configurable On/Off switch plasmoid for KDE fully
-written in QML. It makes use of QT's ToggleButton widget in order to
-implement the functionality.
+This is a widely configurable On/Off switch commands plasmoid for KDE fully written in QML. It makes use of QT's ToggleButton widget in order to implement the functionality.
+
+## Feature 
+- Click to execute a command/script
+- Command/script on toggle off and toggle on 
+- Toggle on startup
+- Watch the state on startup
+- Custom initial state
+- Custom initial state to inactive 
+- Extended colorization of QT's ToggleButton
+- Custom displayed text on enable (on)
+- Custom displayed text on disable (off)
+- Custom displayed text on inactive state
+- Custom tooltip text
+- Custom script on and off
+- Check the execution state of the script on and off
+- Watcher (custom watching command with interval)
 
 ## Installation
 
@@ -11,29 +25,6 @@ Install this plasmoid using `kpackagetool5 -t Plasma/Applet -i .` in the
 top-directory
 
 ## Configuration
-The plasmoid can by widely configured via the Settings menu:
- - name: The name of the switch displayed on the ToggleButton
- - initialState: State entered upon startup. Will call corresponding script
- - onScript: Called upon toggling off -> on if onScriptState is true
- - onScriptState: Switch to enable or disable the execution of onScript
- - offScript: Called upon toggling on -> off if offScriptState is true
- - offScriptState: Switch to enable or disable the execution of offScript
+The plasmoid can by widely configured via the Settings menu
 
-## Further ideas
-
-Enable the switch to have a persistent state. Currently it's unclear
-how the currentState might be stored persistently. The naive approach
-to abuse the configuration mechanism does unfortunately **not** work
-
-For this, another configuration parameter is required:
- - persistentState -- boolean; make switch persistent during restart
-
-Basically two types of switches, the latter is implemented:
-
-  * persistentState == true: Switch state will be persistent over
-    restarts of the plasmoid. For this, onScript or offScript will be
-    called during instantiation depending on currentState.
-
-  * persistentState == false: Switch state will be volatile. Switch
-    will go into initialState upon startup. For this, onScript or
-    offScript will be called while it's instantiated.
+## Captures
