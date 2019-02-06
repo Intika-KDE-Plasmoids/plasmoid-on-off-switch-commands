@@ -30,21 +30,23 @@ The plasmoid can by widely configured via the Settings menu
 ## Captures
 
 <p align="center">
-<div style="text-align:center"><img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072407.png" /></div>
+  
+<img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072407.png" />
 
-<div style="text-align:center"><img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072415.png" /></div>
+<img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072415.png" />
 
-<div style="text-align:center"><img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072428.png" /></div>
+<img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072428.png" />
+  
+<img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072539.png" />
 
-<div style="text-align:center"><img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072539.png" /></div>
+<img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072706.png" />
 
-<div style="text-align:center"><img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_072706.png" /></div>
+<img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_073638.png" />
 
-<div style="text-align:center"><img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_073638.png" /></div>
+<img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_073645.png" />
 
-<div style="text-align:center"><img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_073645.png" /></div>
+<img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_073650.png" />
 
-<div style="text-align:center"><img src ="https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/raw/master/screenshot/Screenshot_20190206_073650.png" /></div>
 </p>
 
 ## Todo 
