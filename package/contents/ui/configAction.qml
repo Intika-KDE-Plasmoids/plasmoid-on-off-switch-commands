@@ -19,7 +19,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
 
 Item {
-    id: configPage
+    id: configPageAction
 
     property alias cfg_onScriptResult: onScriptResultBox.checked
     property alias cfg_offScriptResult: offScriptResultBox.checked
@@ -29,11 +29,10 @@ Item {
     property alias cfg_offScript: offScriptText.text
     
     ColumnLayout {
-        GroupBox {
-            flat: true
+        RowLayout {
             ColumnLayout {
                 Label {
-                    text: i18n("On-Script")
+                    text: i18n("\nOn-Script")
                     font.weight: Font.Bold
                 }
                 CheckBox {
@@ -50,11 +49,10 @@ Item {
                 }
             }
         }
-        GroupBox {
-            flat: true
+        RowLayout {
             ColumnLayout {
                 Label {
-                    text: i18n("Off-Script")
+                    text: i18n("\nOff-Script")
                     font.weight: Font.Bold
                 }
                 CheckBox {
@@ -71,11 +69,10 @@ Item {
                 }
             }
         }
-        GroupBox {
-            flat: true
+        RowLayout {
             ColumnLayout {
                 Label {
-                    text: i18n("On-Script Result")
+                    text: i18n("\nOn-Script Result")
                     font.weight: Font.Bold
                 }
                 CheckBox {
@@ -84,17 +81,27 @@ Item {
                 }
             }
         }
-        GroupBox {
-            flat: true
+        RowLayout {
             ColumnLayout {
                 Label {
-                    text: i18n("Off-Script Result")
+                    text: i18n("\nOff-Script Result")
                     font.weight: Font.Bold
                 }
                 CheckBox {
                     id: offScriptResultBox
                     text: i18n("Change state text to '!' if off-script fail (execution result)")
                 }
+            }
+        }
+        RowLayout {
+            Label {
+                text: i18n("\nNote")
+                font.weight: Font.Bold
+            }
+        }
+        RowLayout {
+            Label {
+                text: i18n("Modified actions settings will be used on next toggle")
             }
         }
     }

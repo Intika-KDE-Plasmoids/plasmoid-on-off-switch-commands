@@ -34,10 +34,6 @@
       <label>Initial state of the toggle</label>
       <default>false</default>
     </entry>
-    <entry name="fullColor" type="Bool">
-      <label>Initial state of the toggle</label>
-      <default>false</default>
-    </entry>
     <entry name="onScriptResult" type="Bool">
       <label>Change state to off if on-script fail (execution result)</label>
       <default>false</default>
@@ -77,6 +73,54 @@
     <entry name="watcherRefreshRate" type="int">
       <label>Watcher timer - refresh rate</label>
       <default>60</default>
+    </entry>
+    <entry name="fullColor" type="Bool">
+      <label>Initial state of the toggle</label>
+      <default>false</default>
+    </entry>
+    <entry name="fullCircle" type="Bool">
+      <label>Use the whole circle to display the state</label>
+      <default>false</default>
+    </entry>
+    <entry name="extendedGradientSize" type="Bool">
+      <label>Extend the width of the gradient</label>
+      <default>false</default>
+    </entry>
+    <entry name="textFullColor" type="Bool">
+      <label>Set the text color according to the state</label>
+      <default>false</default>
+    </entry>
+    <entry name="extendedGradientSizePx" type="int">
+      <label>Make the cirle state indicator thicker by n pixels</label>
+      <default>0</default>
+    </entry>
+    <entry name="usedText1" type="String">
+      <label>Used text variable part 1 to be able to live update from settings</label>
+      <default></default>
+    </entry>
+    <entry name="usedText2" type="String">
+      <label>Used text variable part 2 to be able to live update from settings</label>
+      <default></default>
+    </entry>
+    <entry name="usedText3" type="String">
+      <label>Used text variable part 3 to be able to live update from settings</label>
+      <default></default>
+    </entry>
+    <entry name="usedText4" type="String">
+      <label>Used text variable part 4 to be able to live update from settings</label>
+      <default></default>
+    </entry>
+    <entry name="usedText5" type="String">
+      <label>Used text variable part 5 to be able to live update from settings</label>
+      <default></default>
+    </entry>
+    <entry name="usedText6" type="String">
+      <label>Used text variable part 6 (state) to be able to live update from settings</label>
+      <default></default>
+    </entry>
+    <entry name="checkUpdateStartup" type="Bool">
+      <label>Notify for update on startup</label>
+      <default>true</default>
     </entry>
   </group>
 </kcfg>

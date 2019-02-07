@@ -25,12 +25,22 @@ ConfigModel {
     }
     ConfigCategory {
         name: i18n("Action")
-        icon: "configure"
+        icon: "stock_task"
         source: "configAction.qml"
     }
     ConfigCategory {
         name: i18n("Watcher")
-        icon: "configure"
+        icon: "org.kde.plasma.analogclock"
         source: "configWatcher.qml"
+    }
+    ConfigCategory {
+        name: i18n("Style")
+        icon: "brightnesssettings"
+        source: "configStyle.qml"
+    }
+    ConfigCategory {
+        name: i18n("Update")
+        icon: "update-low"
+        source: "configUpdater.qml"
     }
 }

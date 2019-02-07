@@ -19,7 +19,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
 
 Item {
-    id: configPage
+    id: configPageWatcher
     
     property alias cfg_onScriptStateWatcher: onScriptStateWatcherBox.checked
     property alias cfg_onScriptWatcherCommand: onScriptWatcherCommand.text
@@ -30,11 +30,11 @@ Item {
             flat: true
             ColumnLayout {
                 Label {
-                    text: i18n("On-Script State Watcher")
+                    text: i18n("\nOn-Script State Watcher")
                     font.weight: Font.Bold
                 }
                 Label {
-                    text: i18n("\nCommand to check the 'on script' state\nThis will switch off the plasmoid state if the command fail\n")
+                    text: i18n("Command to check the 'on script' state\nThis will switch off the plasmoid state if the command fail\n")
                 }
                 CheckBox {
                     id: onScriptStateWatcherBox
@@ -61,7 +61,13 @@ Item {
 					minimumValue: 1
 					maximumValue: 3600
 				}
-                
+                Label {
+                    text: i18n("\nNote")
+                    font.weight: Font.Bold
+                }
+                Label {
+                    text: i18n("Modified watcher settings will be used on next toggle")
+                }
             }
         }
     }
