@@ -36,7 +36,7 @@ ToggleButton {
     
     property bool switchOn
     property bool inactive: false;
-    property string currentVersion: '4.6.0';
+    property string currentVersion: '4.7.0';
     property string updateResponse;
     property string name: Plasmoid.configuration.name
     property string nameOffText: Plasmoid.configuration.nameOffText
@@ -547,8 +547,13 @@ ToggleButton {
         var notificationCommand = "notify-send --icon=system-shutdown 'Plasmoid Switch On Off' 'An update is available \n<a href=\"https://www.opendesktop.org/p/1288840/\">Update link</a>' -t 30000";
         executableNotification.exec(notificationCommand);
     }
+
+    function noAvailableUpdate() {
+        var notificationCommand = "notify-send --icon=system-shutdown 'Plasmoid Switch On Off' 'Your current version is up to date' -t 30000";
+        executableNotification.exec(notificationCommand);
+    }
     
-    function updaterNotification() {
+    function updaterNotification(notifyUpdated) {
         //https://raw.githubusercontent.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/master/version
         var xhr = new XMLHttpRequest;
         xhr.responseType = 'text';
@@ -560,6 +565,8 @@ ToggleButton {
                 console.log('.'+currentVersion+'.');
                 if (updateResponse.localeCompare(currentVersion) && updateResponse.localeCompare('')) {
                     availableUpdate();
+                } else if (notifyUpdated) {
+                    noAvailableUpdate();
                 }
             }
         };
@@ -594,7 +601,7 @@ ToggleButton {
     }
     
     function action_checkUpdate() {
-        updaterNotification();
+        updaterNotification(true);
     }
     
     Component.onCompleted: {
@@ -631,7 +638,7 @@ ToggleButton {
         
         //Updater
         if (checkUpdateStartup) {
-            updaterNotification();
+            updaterNotification(false);
         }
     }
     

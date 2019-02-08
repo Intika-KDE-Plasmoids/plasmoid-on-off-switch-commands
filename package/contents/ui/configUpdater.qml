@@ -35,7 +35,7 @@ Item {
                     text: i18n("Plasmoid: On-Off Switch Commands\n")
                 }
                 Label {
-                    text: i18n("Version: 4.6.0")
+                    text: i18n("Version: 4.7.0")
                 }
                 Label {
                     text: i18n("Author: Intika")
