@@ -36,7 +36,7 @@ ToggleButton {
     
     property bool switchOn
     property bool inactive: false;
-    property string currentVersion: '4.5.0';
+    property string currentVersion: '4.6.0';
     property string updateResponse;
     property string name: Plasmoid.configuration.name
     property string nameOffText: Plasmoid.configuration.nameOffText
@@ -549,7 +549,6 @@ ToggleButton {
     }
     
     function updaterNotification() {
-        //version='4.5.0';
         //https://raw.githubusercontent.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/master/version
         var xhr = new XMLHttpRequest;
         xhr.responseType = 'text';
@@ -557,9 +556,9 @@ ToggleButton {
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 updateResponse = xhr.responseText;
-                console.log('d'+updateResponse+'d');
-                console.log('d'+currentVersion+'d');
-                if (updateResponse.localeCompare(currentVersion)) {
+                console.log('.'+updateResponse+'.');
+                console.log('.'+currentVersion+'.');
+                if (updateResponse.localeCompare(currentVersion) && updateResponse.localeCompare('')) {
                     availableUpdate();
                 }
             }
