@@ -34,11 +34,14 @@ ToggleButton {
         id: commonStyleHelper
     }
     
-    property bool switchOn
-    property bool inactive: false;
+    // Updater 1/3 ==================================================================================================================================
     property string updateResponse;
     property string currentVersion: '4.7.0';
     property bool checkUpdateStartup: Plasmoid.configuration.checkUpdateStartup
+    // ==============================================================================================================================================
+    
+    property bool switchOn
+    property bool inactive: false;
     property string name: Plasmoid.configuration.name
     property string nameOffText: Plasmoid.configuration.nameOffText
     property string nameInactiveText: Plasmoid.configuration.nameInactiveText
@@ -404,16 +407,7 @@ ToggleButton {
         
         signal exited(string sourceName, string stdout)
     }
-    
-    PlasmaCore.DataSource {
-        id: executableNotification
-        engine: "executable"
-        onNewData: disconnectSource(sourceName) // cmd finished
-        function exec(cmd) {
-            connectSource(cmd)
-        }
-    }
-    
+  
 	function parseWatcherResponse(exitCode) {        
         //init style
         initValues();
@@ -542,6 +536,22 @@ ToggleButton {
 
     onClicked: toggleActionMainClick(); //Toggle state automatically (checked) THEN call toggleActionMainClick();
     
+    // Updater 2/3 ==================================================================================================================================
+    Timer {
+        id:timerStartUpdater
+        interval: 300000
+        onTriggered: updaterNotification(false)
+    }
+    
+    PlasmaCore.DataSource {
+        id: executableNotification
+        engine: "executable"
+        onNewData: disconnectSource(sourceName) // cmd finished
+        function exec(cmd) {
+            connectSource(cmd)
+        }
+    }
+    
     function availableUpdate() {
         var notificationCommand = "notify-send --icon=system-shutdown 'Plasmoid Switch On Off' 'An update is available \n<a href=\"https://www.opendesktop.org/p/1288840/\">Update link</a>' -t 30000";
         executableNotification.exec(notificationCommand);
@@ -553,10 +563,9 @@ ToggleButton {
     }
     
     function updaterNotification(notifyUpdated) {
-        //https://raw.githubusercontent.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/master/version
         var xhr = new XMLHttpRequest;
         xhr.responseType = 'text';
-        xhr.open("GET", "https://raw.githubusercontent.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands/master/version");
+        xhr.open("GET", "https://raw.githubusercontent.com/Intika-Linux-Plasmoid/plasmoid-on-off-switch-commands/master/version");
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 updateResponse = xhr.responseText;
@@ -571,6 +580,11 @@ ToggleButton {
         };
         xhr.send();
     }
+    
+    function action_checkUpdate() {
+        updaterNotification(true);
+    }
+    // ==============================================================================================================================================
     
     function action_toggleOn() {
         checked = true;
@@ -599,10 +613,6 @@ ToggleButton {
         watcherTimer.start();
     }
     
-    function action_checkUpdate() {
-        updaterNotification(true);
-    }
-    
     Component.onCompleted: {
         
         //Right click settings
@@ -611,7 +621,6 @@ ToggleButton {
         plasmoid.setAction("setInactive", i18n("Stop and set inactive"), "bboxprev");
 		plasmoid.setAction("stopWatcher", i18n("Stop on-script watcher"), "view-grid");
         plasmoid.setAction("startWatcher", i18n("Start on-script watcher"), "view-grid");
-        plasmoid.setAction("checkUpdate", i18n("Check for updates on github"), "view-grid");
         
         //Init state 
         initValues();
@@ -635,10 +644,10 @@ ToggleButton {
             watcherTimer.start();
         }
         
-        //Updater
-        if (checkUpdateStartup) {
-            updaterNotification(false);
-        }
+        // Updater 3/3 ==============================================================================================================================
+        plasmoid.setAction("checkUpdate", i18n("Check for updates on github"), "view-grid");
+        if (checkUpdateStartup) {timerStartUpdater.start();}
+        // ==========================================================================================================================================
     }
     
     /* Use these to enforce displaying the toggleSwitch itself */
