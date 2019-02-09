@@ -36,8 +36,9 @@ ToggleButton {
     
     property bool switchOn
     property bool inactive: false;
-    property string currentVersion: '4.7.0';
     property string updateResponse;
+    property string currentVersion: '4.7.0';
+    property bool checkUpdateStartup: Plasmoid.configuration.checkUpdateStartup
     property string name: Plasmoid.configuration.name
     property string nameOffText: Plasmoid.configuration.nameOffText
     property string nameInactiveText: Plasmoid.configuration.nameInactiveText
@@ -74,8 +75,6 @@ ToggleButton {
     property string usedText4: Plasmoid.configuration.usedText4
     property string usedText5: Plasmoid.configuration.usedText5
     property string usedText6: Plasmoid.configuration.usedText6 //state
-    
-    property bool checkUpdateStartup: Plasmoid.configuration.checkUpdateStartup
     
     // ==============================================================================================================================================
     
@@ -563,7 +562,7 @@ ToggleButton {
                 updateResponse = xhr.responseText;
                 console.log('.'+updateResponse+'.');
                 console.log('.'+currentVersion+'.');
-                if (updateResponse.localeCompare(currentVersion) && updateResponse.localeCompare('')) {
+                if (updateResponse.localeCompare(currentVersion) && updateResponse.localeCompare('') && updateResponse.localeCompare('404: Not Found\n')) {
                     availableUpdate();
                 } else if (notifyUpdated) {
                     noAvailableUpdate();
