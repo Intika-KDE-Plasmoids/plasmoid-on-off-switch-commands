@@ -21,9 +21,7 @@ This is a widely configurable On/Off switch commands plasmoid for KDE fully writ
 
 ## Installation
 
-Install this plasmoid using `kpackagetool5 -t Plasma/Applet -i .` in the top-directory
-
-Or just load the plasmoid file from the package directory into your kde plasma desktop
+Load the plasmoid file from the package directory into your kde plasma desktop
 
 You may need to install "qtquick-extras" if it's not already installed
 "sudo apt install qml-module-qtquick-extras"
