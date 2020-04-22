@@ -42,7 +42,7 @@ Item {
                 }
                 TextField {
                     Layout.minimumWidth: 450
-                    text: 'https://github.com/Intika-Linux-KDE/Plasmoid-On-Off-Switch-Commands'
+                    text: 'https://github.com/Intika-KDE-Plasmoids/plasmoid-on-off-switch-commands'
                 }
                 CheckBox {
                     id: checkUpdateStartupBox
