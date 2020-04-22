@@ -565,7 +565,7 @@ ToggleButton {
     function updaterNotification(notifyUpdated) {
         var xhr = new XMLHttpRequest;
         xhr.responseType = 'text';
-        xhr.open("GET", "https://raw.githubusercontent.com/Intika-Linux-Plasmoid/plasmoid-on-off-switch-commands/master/version");
+        xhr.open("GET", "https://raw.githubusercontent.com/Intika-KDE-Plasmoids/plasmoid-on-off-switch-commands/master/version");
         xhr.onreadystatechange = function() {
             if (xhr.readyState == XMLHttpRequest.DONE) {
                 updateResponse = xhr.responseText;
